@@ -24,7 +24,7 @@ public class MysqlController {
 
 	@GetMapping("/")
 	public String home() {
-		return "Logged in Successfully";
+		return userService.welcome();
 	}
 
 	@GetMapping("/welcome")

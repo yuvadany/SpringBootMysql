@@ -3,6 +3,8 @@ package com.example.demo.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +14,7 @@ import com.example.demo.repo.UserRepo;
 @Service
 public class UserService {
 
+	 private static final Logger logger = LoggerFactory.getLogger(UserService.class);
 	@Autowired
 	public UserRepo userRepo;
 	
@@ -19,7 +22,13 @@ public class UserService {
 	User imputUser;
 		
 
+	public String welcome(){
+		logger.info("inside welcome() - user service");
+	return "welcome";	
+	}
+	
 	public List<User> getAllUsers() {
+		logger.info("inside getAllUsers() - user service");
 		return userRepo.findAll();
 	}
 
@@ -32,7 +41,7 @@ public class UserService {
 	}
 
 	public Optional<User> getUser(int id) {
-		// TODO Auto-generated method stub
+		logger.info("inside getUser() - user service");
 		return userRepo.findById(id);
 	}
 
