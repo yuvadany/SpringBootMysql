@@ -430,3 +430,41 @@ java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '3' for key '
 2019-08-27 20:35:19.705  INFO 14376 --- [http-nio-2222-exec-3] com.example.demo.service.UserService     : inside getAllUsers() - user service
 2019-08-27 20:36:57.082  INFO 14376 --- [http-nio-2222-exec-1] com.example.demo.service.UserService     : inside getAllUsers() - user service
 2019-08-27 20:37:18.954  INFO 14376 --- [http-nio-2222-exec-8] com.example.demo.service.UserService     : inside getAllUsers() - user service
+2019-08-27 21:12:27.826  WARN 14376 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m48s986ms37µs756ns).
+2019-08-27 21:22:35.630  INFO 16932 --- [main] c.e.demo.MySqlSpringBootApplication      : Starting MySqlSpringBootApplication on DESKTOP-VLHJ763 with PID 16932 (C:\yuvi\java\SpringBootMysql\target\classes started by sanku in C:\yuvi\java\SpringBootMysql)
+2019-08-27 21:22:35.632  INFO 16932 --- [main] c.e.demo.MySqlSpringBootApplication      : No active profile set, falling back to default profiles: default
+2019-08-27 21:22:36.896  INFO 16932 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-27 21:22:36.962  INFO 16932 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58ms. Found 1 repository interfaces.
+2019-08-27 21:22:37.341  INFO 16932 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$490d615f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-27 21:22:37.376  INFO 16932 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2019-08-27 21:22:37.417  INFO 16932 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a4759c60] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-27 21:22:37.950  INFO 16932 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 2222 (http)
+2019-08-27 21:22:37.980  INFO 16932 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-27 21:22:37.980  INFO 16932 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-27 21:22:38.139  INFO 16932 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-27 21:22:38.139  INFO 16932 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2453 ms
+2019-08-27 21:22:38.344  INFO 16932 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-08-27 21:22:38.828  INFO 16932 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-08-27 21:22:38.966  INFO 16932 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-27 21:22:39.129  INFO 16932 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-08-27 21:22:39.136  INFO 16932 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-08-27 21:22:39.405  INFO 16932 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-08-27 21:22:39.620  INFO 16932 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-27 21:22:40.550  INFO 16932 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-27 21:22:41.364  WARN 16932 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-27 21:22:41.548  INFO 16932 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-08-27 21:22:41.723  INFO 16932 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-27 21:22:41.834  WARN 16932 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-08-27 21:22:42.057  INFO 16932 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-08-27 21:22:42.082  INFO 16932 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-08-27 21:22:42.122  INFO 16932 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-08-27 21:22:42.375  INFO 16932 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 2222 (http) with context path ''
+2019-08-27 21:22:42.380  INFO 16932 --- [main] c.e.demo.MySqlSpringBootApplication      : Started MySqlSpringBootApplication in 7.125 seconds (JVM running for 7.538)
+2019-08-27 21:22:49.865  INFO 16932 --- [http-nio-2222-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-27 21:22:49.867  INFO 16932 --- [http-nio-2222-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-27 21:22:49.878  INFO 16932 --- [http-nio-2222-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2019-08-27 21:22:50.697  INFO 16932 --- [http-nio-2222-exec-1] com.example.demo.service.UserService     : inside welcome() - user service
+2019-08-27 21:23:08.932  INFO 16932 --- [http-nio-2222-exec-9] com.example.demo.service.UserService     : inside getAllUsers() - user service
+2019-08-27 21:23:08.971  INFO 16932 --- [http-nio-2222-exec-9] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory

@@ -11,6 +11,7 @@ import com.example.demo.entity.User;
 @Repository
 public interface UserRepo extends JpaRepository<User, Integer> {
 
-
+	// Custom Function based on Role
+	public List<User> findByRole(String role);
 
 }

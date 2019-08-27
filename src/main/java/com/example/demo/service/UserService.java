@@ -14,26 +14,30 @@ import com.example.demo.repo.UserRepo;
 @Service
 public class UserService {
 
-	 private static final Logger logger = LoggerFactory.getLogger(UserService.class);
+	private static final Logger logger = LoggerFactory.getLogger(UserService.class);
 	@Autowired
 	public UserRepo userRepo;
-	
+
 	@Autowired
 	User imputUser;
-		
 
-	public String welcome(){
+	public String welcome() {
 		logger.info("inside welcome() - user service");
-	return "welcome";	
+		return "welcome";
 	}
-	
+
 	public List<User> getAllUsers() {
 		logger.info("inside getAllUsers() - user service");
 		return userRepo.findAll();
 	}
 
+	public List<User> findByRole(String role) {
+		logger.info("inside getAllUsers() - user service");
+		return userRepo.findByRole(role);
+	}
+
 	public void addUser(User user) {
-		 userRepo.save(user);
+		userRepo.save(user);
 	}
 
 	public void removeUser(int id) {
@@ -45,15 +49,15 @@ public class UserService {
 		return userRepo.findById(id);
 	}
 
-	public Optional<User> updateUser(User user2, int id) {	
+	public Optional<User> updateUser(User user2, int id) {
 		Optional<User> existingUser = userRepo.findById(id);
-		//User inputUser = null;
+		// User inputUser = null;
 		imputUser.setId(id);
 		imputUser.setPassword(user2.getPassword());
 		imputUser.setRole(user2.getRole());
-		imputUser.setUser_name(user2.getUser_name());		
+		imputUser.setUser_name(user2.getUser_name());
 		userRepo.save(imputUser);
 		return userRepo.findById(id);
-		
+
 	}
 }
