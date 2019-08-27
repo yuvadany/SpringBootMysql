@@ -13,7 +13,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-@Entity
+@Entity(name="user")
 @Table(name = "user")
 @Data
 @NoArgsConstructor
@@ -24,7 +24,7 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-	private String user_name;
+	private String username;
 	private String role;
 	private String password;
 

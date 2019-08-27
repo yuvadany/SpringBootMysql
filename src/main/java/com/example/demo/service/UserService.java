@@ -32,10 +32,19 @@ public class UserService {
 	}
 
 	public List<User> findByRole(String role) {
-		logger.info("inside getAllUsers() - user service");
+		logger.info("inside findByRole() - user service");
 		return userRepo.findByRole(role);
 	}
+	
+	public List<User> findByUser(String name) {
+		logger.info("inside findByUser() - user service");
+		return userRepo.findByUsername(name);
+	}
 
+	public List<User> findByRoleSorted(String role) {
+		logger.info("inside findByRoleSorted() - user service");
+		return userRepo.findByRoleSorted(role);
+	}
 	public void addUser(User user) {
 		userRepo.save(user);
 	}
@@ -55,7 +64,7 @@ public class UserService {
 		imputUser.setId(id);
 		imputUser.setPassword(user2.getPassword());
 		imputUser.setRole(user2.getRole());
-		imputUser.setUser_name(user2.getUser_name());
+		imputUser.setUsername(user2.getUsername());
 		userRepo.save(imputUser);
 		return userRepo.findById(id);
 

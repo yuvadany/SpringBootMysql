@@ -42,6 +42,17 @@ public class MysqlController {
 	public List<User> findByRole(@RequestParam String role) {
 		return userService.findByRole(role);
 	}
+	
+	@GetMapping("/RolesByUsernameSorted")
+	public List<User> findByRoleSorted(@RequestParam String role) {
+		return userService.findByRoleSorted(role);
+	}
+
+	@GetMapping("/findUser")
+	public List<User> findByUser(@RequestParam String user) {
+		return userService.findByUser(user);
+	}
+
 	@GetMapping(path = "/getUser/{id}", produces = "application/json")
 	@ResponseBody
 	public ResponseEntity<Optional<User>> getUser(@PathVariable int id) {
@@ -53,18 +64,17 @@ public class MysqlController {
 
 	}
 
-	@PostMapping("/addUser")	
+	@PostMapping("/addUser")
 	public List<User> addUser(@RequestBody User user) {
 		userService.addUser(user);
 		return userService.getAllUsers();
 	}
-	
+
 	@PostMapping("/updateUser/{id}")
 	@ResponseBody
-	public Optional<User> updateUser(@RequestBody User user, @ PathVariable int id) {
-		return userService.updateUser(user, id);		
+	public Optional<User> updateUser(@RequestBody User user, @PathVariable int id) {
+		return userService.updateUser(user, id);
 	}
-
 
 	@DeleteMapping("/removeUser/{id}")
 	public List<User> deleteUser(@PathVariable int id) {
